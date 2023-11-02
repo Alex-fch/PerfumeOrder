@@ -1,0 +1,204 @@
+[{
+    "path" : "/",
+    "controller" : "Home",
+    "action" : "Home",
+    "method" : "GET",
+    "param" : [],
+    "manager": []
+},
+{
+	"path" : "/Error",
+	"controller" : "Error",
+	"action" : "Show",
+	"method" : "GET",
+	"param" : [],
+	"manager": []
+},
+{
+    "path" : "/CreateOrder",
+    "controller" : "Create",
+    "action" : "Create",
+    "method" : "GET",
+    "param" : [],
+    "manager": []
+},
+{
+    "path" : "/CreateOrder",
+    "controller" : "Create",
+    "action" : "CreateOrder",
+    "method" : "POST",
+    "param" : [
+        "name"
+    ],
+    "manager": [
+        "GeneralOrderManager"
+    ]
+},
+{
+    "path" : "/Management",
+    "controller" : "Management",
+    "action" : "Management",
+    "method" : "GET",
+    "param" : [],
+    "manager": [
+        "PerfumeManager",
+        "IndividualOrderManager",
+        "GeneralOrderManager",
+        "PossessesManager"
+    ]
+},
+{
+    "path" : "/Ajax",
+    "controller" : "Ajax",
+    "action" : "CheckIfExist",
+    "method" : "GET",
+    "param" : [],
+    "manager": []
+},
+{
+    "path" : "/AjaxCreateIndiOrder",
+    "controller" : "Ajax",
+    "action" : "CreateIndiOrder",
+    "method" : "POST",
+    "param" : [
+        "nameIndividualOrder",
+        "idGeneralOrder"
+    ],
+    "manager": [
+        "IndividualOrderManager"
+    ]
+},
+{
+    "path" : "/AjaxShowPerfume",
+    "controller" : "Ajax",
+    "action" : "ShowListPerfume",
+    "method" : "POST",
+    "param" : [
+        "text"
+    ],
+    "manager": [
+        "PerfumeManager"
+    ]
+},
+{
+    "path" : "/AjaxShowIndividualOrder",
+    "controller" : "Ajax",
+    "action" : "showIndiviualOrder",
+    "method" : "POST",
+    "param" : [
+        "idIndividualOrder",
+        "idGeneralOrder"
+    ],
+    "manager": [
+        "IndividualOrderManager",
+        "PerfumeManager",
+        "PossessesManager"
+    ]
+},
+{
+    "path" : "/AjaxModifyQuantityPerfume",
+    "controller" : "Ajax",
+    "action" : "modifyQuantityPerfume",
+    "method" : "POST",
+    "param" : [
+        "idIndividualOrder",
+        "idPerfume",
+        "quantity"
+    ],
+    "manager": [
+        "PossessesManager",
+        "IndividualOrderManager",
+        "PerfumeManager",
+        "GeneralOrderManager"
+    ]
+},
+{
+    "path" : "/AjaxDeletePerfume",
+    "controller" : "Ajax",
+    "action" : "deletePerfume",
+    "method" : "POST",
+    "param" : [
+        "idIndividualOrder",
+        "idPerfume"
+    ],
+    "manager": [
+        "PossessesManager",
+        "IndividualOrderManager",
+        "PerfumeManager",
+        "GeneralOrderManager"
+    ]
+},
+{
+    "path" : "/AjaxDeleteIndividualOrder",
+    "controller" : "Ajax",
+    "action" : "deleteIndividualOrder",
+    "method" : "POST",
+    "param" : [
+        "idIndividualOrder"
+    ],
+    "manager": [
+        "PossessesManager",
+        "IndividualOrderManager",
+        "PerfumeManager",
+        "GeneralOrderManager"
+    ]
+},
+{
+    "path" : "/Modify",
+    "controller" : "Modify",
+    "action" : "GetListOrder",
+    "method" : "GET",
+    "param" : [],
+    "manager": [
+        "GeneralOrderManager"
+    ]
+},
+{
+    "path" : "/Modify",
+    "controller" : "Modify",
+    "action" : "checkModify",
+    "method" : "POST",
+    "param" : [
+        "idGeneralOrder"
+    ],
+    "manager": [
+        "GeneralOrderManager"
+    ]
+},
+{
+    "path" : "/Print",
+    "controller" : "Print",
+    "action" : "print",
+    "method" : "GET",
+    "param" : [],
+    "manager": [
+        "GeneralOrderManager"
+    ]
+},
+{
+    "path" : "/Print",
+    "controller" : "Print",
+    "action" : "showPrint",
+    "method" : "POST",
+    "param" : [
+        "idGeneralOrder"
+    ],
+    "manager": [
+        "GeneralOrderManager"
+    ]
+},
+{
+    "path" : "/EditPrint",
+    "controller" : "Print",
+    "action" : "editPrint",
+    "method" : "GET",
+    "param" : [],
+    "manager": [
+        "GeneralOrderManager",
+        "EditOrderManager",
+        "IndividualOrderManager",
+        "PerfumeManager",
+        "PossessesManager"
+    ]
+}
+]
